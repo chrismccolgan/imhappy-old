@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "test",
+      "userName": "user1",
+      "birthday": "2020-01-01",
+      "id": 1
+    },
+    {
+      "email": "test2@test.com",
+      "password": "test",
+      "userName": "user2",
+      "birthday": "1990-02-02",
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "category": "test 1",
+      "icon": "😀",
+      "id": 1
+    },
+    {
+      "category": "test 2",
+      "icon": "💀",
+      "id": 2
+    }
+  ],
+  "entries": [
+    {
+      "entry": "User 1 test entry",
+      "date": "2019-03-03",
+      "isSignificant": false,
+      "userId": 1,
+      "categoryId": 2,
+      "id": 1
+    },
+    {
+      "entry": "User 1 test entry 2",
+      "date": "2018-03-04",
+      "isSignificant": true,
+      "userId": 1,
+      "categoryId": 1,
+      "id": 2
+    },
+    {
+      "entry": "User 2 test entry",
+      "date": "2020-03-03",
+      "isSignificant": true,
+      "userId": 2,
+      "categoryId": 1,
+      "id": 3
+    },
+    {
+      "entry": "Test 1234567890",
+      "date": "2020-07-18",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 5
+    },
+    {
+      "entry": "Test test test",
+      "date": "2020-07-31",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 6
+    }
+  ]
+}

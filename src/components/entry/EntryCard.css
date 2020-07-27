@@ -1,0 +1,73 @@
+.card-date {
+    font-weight: bold;
+}
+
+.card-buttons {
+    display: none;
+}
+
+.card:hover .card-buttons {
+    display: inline;
+}
+
+.card-buttons-delete:hover {
+    cursor: pointer;
+    color: -webkit-link;
+}
+
+
+
+
+
+
+
+
+
+/* 
+.January {
+
+}
+
+.February {
+
+}
+
+.March {
+
+}
+
+.April {
+
+}
+
+.May {
+
+}
+
+.June {
+
+}
+
+.July {
+
+}
+
+.August {
+
+}
+
+.September {
+
+}
+
+.October {
+
+}
+
+.November {
+
+}
+
+.December {
+
+} */
