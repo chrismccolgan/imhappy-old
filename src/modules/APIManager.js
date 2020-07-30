@@ -51,5 +51,9 @@ export default {
             },
             body: JSON.stringify(newUser)
         }).then(response => response.json())
+    },
+    getAllCategories: () => {
+        return fetch(`${url}/categories`)
+            .then(response => response.json())
     }
 }

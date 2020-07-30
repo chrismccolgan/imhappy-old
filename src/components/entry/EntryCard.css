@@ -15,6 +15,11 @@
     color: -webkit-link;
 }
 
+.card-buttons-edit:hover {
+    cursor: pointer;
+    color: -webkit-link;
+}
+
 
 
 

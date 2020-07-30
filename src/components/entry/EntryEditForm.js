@@ -2,16 +2,25 @@ import React, { useState, useEffect } from "react"
 import APIManager from "../../modules/APIManager"
 import "./EntryForm.css"
 
-const EntryForm = props => {
+const EntryEditForm = props => {
     const [entry, setEntry] = useState({ entry: "", date: "", userId: 0, categoryId: 0, isSignificant: false })
     const [categories, setCategories] = useState([])
     const [isLoading, setIsLoading] = useState(false)
 
     const getCategories = () => {
-        return APIManager.getAllCategories().then(categoriesFromAPI => {
-            setCategories(categoriesFromAPI)
-        })
+        return APIManager.getAllCategories()
+            .then(categoriesFromAPI => {
+                setCategories(categoriesFromAPI)
+            })
     }
+
+    useEffect(() => {
+        APIManager.getSingleEntry(props.match.params.entryId)
+            .then(entry => {
+                setEntry(entry)
+                setIsLoading(false)
+            })
+    }, [props.match.params.entryId])
 
     useEffect(() => {
         getCategories()
@@ -23,20 +32,31 @@ const EntryForm = props => {
         setEntry(stateToChange)
     }
 
-    const constructNewEntry = evt => {
+    const updateExistingEntry = evt => {
         evt.preventDefault()
         setIsLoading(true)
-        entry.isSignificant = JSON.parse(entry.isSignificant)
         entry.categoryId = parseInt(entry.categoryId)
-        APIManager.saveEntry(entry)
+        entry.isSignificant = JSON.parse(entry.isSignificant)
+        const editedEntry = {
+            id: props.match.params.entryId,
+            entry: entry.entry,
+            date: entry.date,
+            categoryId: entry.categoryId,
+            isSignificant: entry.isSignificant,
+            userId: entry.userId
+        }
+        APIManager.editEntry(editedEntry)
             .then(() => props.history.push("/"))
     }
 
-    entry.userId = 1
+    // const deleteEntry = () => {
+    //     APIManager.deleteAnEntry(props.match.params.entryId)
+    //         .then(() => props.history.push("/"))
+    // }
 
     return (
         <div className="container-form">
-            <form onSubmit={constructNewEntry}>
+            <form onSubmit={updateExistingEntry}>
                 <fieldset>
                     <input
                         className="form"
@@ -75,7 +95,7 @@ const EntryForm = props => {
                     />
                     <br />
 
-                    <label htmlFor="entry">Entry</label>
+                    <label htmlFor="name">Entry</label>
                     <br />
                     <input
                         className="form"
@@ -100,11 +120,12 @@ const EntryForm = props => {
                     </select>
                     <br />
 
-                    <button disabled={isLoading} type="submit">Save entry</button>
+                    <button disabled={isLoading} type="submit">Submit</button>
+                    {/* <button disabled={isLoading} onClick={deleteEntry} type="button">Delete</button> */}
                 </fieldset>
             </form>
         </div>
     )
 }
 
-export default EntryForm
+export default EntryEditForm

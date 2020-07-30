@@ -3,16 +3,26 @@
     {
       "email": "test@test.com",
       "password": "test",
-      "userName": "user1",
+      "username": "user1",
       "birthday": "2020-01-01",
+      "accountCreated": "2020-07-01",
       "id": 1
     },
     {
       "email": "test2@test.com",
       "password": "test",
-      "userName": "user2",
+      "username": "user2",
       "birthday": "1990-02-02",
+      "accountCreated": "2020-07-03",
       "id": 2
+    },
+    {
+      "email": "1@1.com",
+      "username": "1",
+      "password": "1",
+      "birthday": "2020-07-30",
+      "accountCreated": "2020-07-30T19:06:51.931Z",
+      "id": 3
     }
   ],
   "categories": [
@@ -45,28 +55,28 @@
       "id": 2
     },
     {
-      "entry": "User 2 test entry",
+      "id": 3,
+      "entry": "User 2 Cat 2 Sig",
       "date": "2020-03-03",
+      "categoryId": 2,
       "isSignificant": true,
-      "userId": 2,
-      "categoryId": 1,
-      "id": 3
+      "userId": 2
     },
     {
-      "entry": "Test 1234567890",
-      "date": "2020-07-18",
+      "entry": "cat 1 sig false",
+      "date": "2020-07-30",
       "userId": 1,
       "categoryId": 1,
       "isSignificant": false,
-      "id": 5
+      "id": 4
     },
     {
-      "entry": "Test test test",
+      "entry": "cat 1 sig true",
       "date": "2020-07-31",
       "userId": 1,
       "categoryId": 1,
       "isSignificant": false,
-      "id": 6
+      "id": 5
     }
   ]
 }
