@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "test",
+      "username": "user1",
+      "birthday": "2020-01-01",
+      "accountCreated": "2020-07-01",
+      "id": 1
+    },
+    {
+      "email": "test2@test.com",
+      "password": "test",
+      "username": "user2",
+      "birthday": "1990-02-02",
+      "accountCreated": "2020-07-03",
+      "id": 2
+    },
+    {
+      "email": "1@1.com",
+      "username": "1",
+      "password": "1",
+      "birthday": "2020-07-30",
+      "accountCreated": "2020-07-30T19:06:51.931Z",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "category": "test 1",
+      "icon": "😀",
+      "id": 1
+    },
+    {
+      "category": "test 2",
+      "icon": "💀",
+      "id": 2
+    }
+  ],
+  "entries": [
+    {
+      "entry": "User 1 test entry",
+      "date": "2019-03-03",
+      "isSignificant": false,
+      "userId": 1,
+      "categoryId": 2,
+      "id": 1
+    },
+    {
+      "entry": "User 1 test entry 2",
+      "date": "2018-03-04",
+      "isSignificant": true,
+      "userId": 1,
+      "categoryId": 1,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "entry": "User 2 Cat 2 Sig",
+      "date": "2020-03-03",
+      "categoryId": 2,
+      "isSignificant": true,
+      "userId": 2
+    },
+    {
+      "entry": "cat 1 sig false",
+      "date": "2020-07-30",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 4
+    },
+    {
+      "entry": "cat 1 sig true",
+      "date": "2020-07-31",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 5
+    }
+  ]
+}
