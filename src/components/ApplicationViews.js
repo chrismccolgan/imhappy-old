@@ -6,18 +6,21 @@ import EntryForm from "./entry/EntryForm"
 import EntryEditForm from "./entry/EntryEditForm"
 import Login from "./auth/Login";
 
-const ApplicationViews = () => {
-    const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+const ApplicationViews = (props) => {
+    const hasUser = props.hasUser
+    const setUser = props.setUser
     return (
         <React.Fragment>
             <Route
                 path="/login"
-                component={Login} />
+                render={props => {
+                    return <Login setUser={setUser} {...props} />
+                }} />
             <Route
                 exact
                 path="/"
                 render={props => {
-                    if (isAuthenticated()) {
+                    if (hasUser) {
                         return <Home {...props} />
                     } else {
                         return <Redirect to="/login" />
@@ -27,7 +30,7 @@ const ApplicationViews = () => {
                 exact
                 path="/entries"
                 render={(props) => {
-                    if (isAuthenticated()) {
+                    if (hasUser) {
                         return <EntryList {...props} />
                     } else {
                         return <Redirect to="/login" />
@@ -36,7 +39,7 @@ const ApplicationViews = () => {
             <Route
                 path="/entries/new"
                 render={(props) => {
-                    if (isAuthenticated()) {
+                    if (hasUser) {
                         return <EntryForm {...props} />
                     } else {
                         return <Redirect to="/login" />
@@ -45,7 +48,7 @@ const ApplicationViews = () => {
             <Route
                 path="/entries/:entryId(\d+)/edit"
                 render={(props) => {
-                    if (isAuthenticated()) {
+                    if (hasUser) {
                         return <EntryEditForm {...props} />
                     } else {
                         return <Redirect to="/login" />

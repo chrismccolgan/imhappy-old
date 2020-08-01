@@ -5,8 +5,10 @@ import APIManager from "../../modules/APIManager"
 const EntryList = props => {
     const [entries, setEntries] = useState([])
 
+    const activeUser = sessionStorage.getItem("activeUser")
+
     const getEntries = () => {
-        return APIManager.getAllEntries().then(entriesFromAPI => {
+        return APIManager.getEntriesByUser(activeUser).then(entriesFromAPI => {
             setEntries(entriesFromAPI)
         })
     }
@@ -15,10 +17,10 @@ const EntryList = props => {
         getEntries()
     }, [])
 
-    const deleteEntry = id => {
-        APIManager.deleteAnEntry(id)
-            .then(() => APIManager.getAllEntries().then(setEntries))
-    }
+    // const deleteEntry = id => {
+    //     APIManager.deleteAnEntry(id)
+    //         .then(() => APIManager.getEntriesByUser(activeUser).then(setEntries))
+    // }
 
     return (
         <div className="container-cards">
@@ -26,7 +28,7 @@ const EntryList = props => {
                 <EntryCard
                     key={entry.id}
                     entry={entry}
-                    deleteEntry={deleteEntry}
+                    // deleteEntry={deleteEntry}
                     {...props}
                 />
             )}

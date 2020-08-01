@@ -12,22 +12,18 @@ const Login = props => {
 		const stateToChange = { ...credentials }
 		stateToChange[evt.target.id] = evt.target.value
 		setCredentials(stateToChange)
-	};
+	}
 
 	const handleLogin = (e) => {
 		e.preventDefault()
-		/*
-		For now, just store the email and password that
-		the customer enters into session storage.
-		...Let's just trust the user... That's a good idea, right????
-		*/
-		sessionStorage.setItem(
-			"credentials",
-			JSON.stringify(credentials)
-		)
-		props.history.push("/")
+		APIManager.getAllUsers()
+			.then(users => users.find(user => {
+				if (user.email === credentials.email && user.password === credentials.password) {
+					props.setUser(user)
+					props.history.push("/")
+				}
+			}))
 	}
-
 
 	// Update state whenever an input field is edited
 	const handleFieldChange2 = (evt) => {
@@ -49,11 +45,34 @@ const Login = props => {
 	const handleRegister = (e) => {
 		e.preventDefault()
 		setIsLoading(true)
+		confirmPassword.setCustomValidity("Please make sure your passwords match.")
 		if (newUser.password !== confirmPassword.value) {
 			confirmPassword.reportValidity()
 		} else {
 			newUser.accountCreated = new Date()
 			APIManager.saveUser(newUser)
+				.then(() => APIManager.getAllUsers()
+					.then(users => users.find(user => {
+						if (user.email === newUser.email && user.password === newUser.password) {
+							const newEntryObj1 = {
+								entry: `Happy birthday, ${user.username}!`,
+								date: user.birthday,
+								isSignificant: true,
+								userId: user.id,
+								categoryId: 1
+							}
+							const newEntryObj2 = {
+								entry: "Joined IMHAPPY",
+								date: user.accountCreated.substring(0, 10),
+								isSignificant: false,
+								userId: user.id,
+								categoryId: 1
+							}
+							APIManager.saveEntry(newEntryObj1)
+							APIManager.saveEntry(newEntryObj2)
+						}
+					}))
+				)
 				.then(() => props.history.push("/"))
 		}
 	}

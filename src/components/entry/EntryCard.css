@@ -1,18 +1,14 @@
+.card {
+    padding: 0.5rem;
+    position: relative;
+}
+
 .card-date {
     font-weight: bold;
 }
 
-.card-buttons {
-    display: none;
-}
-
-.card:hover .card-buttons {
+.card:hover .card-buttons-edit {
     display: inline;
-}
-
-.card-buttons-delete:hover {
-    cursor: pointer;
-    color: -webkit-link;
 }
 
 .card-buttons-edit:hover {
@@ -20,59 +16,76 @@
     color: -webkit-link;
 }
 
+.card-buttons-edit{
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 
-
-
-
-
-
-
-
-/* 
 .January {
-
+    background-color: #95042a;
+    color: whitesmoke;
 }
 
 .February {
-
+    background-color: #453a92;
+    color: whitesmoke;
 }
 
 .March {
-
+    background-color: #4893af;
+    color: whitesmoke;
 }
 
 .April {
-
+    background-color: #b9164d;
+    color:whitesmoke;
 }
 
 .May {
-
+    background-color: #178053;
+    color: whitesmoke;
 }
 
 .June {
-
+    background-color: #942a73;
+    color: whitesmoke;
 }
 
 .July {
-
+    background-color: #b1201c;
+    color: whitesmoke;
 }
 
 .August {
-
+    background-color: #758e29;
+    color: whitesmoke;
 }
 
 .September {
-
+    background-color: #185395;
+    color: whitesmoke;
 }
 
 .October {
-
+    background-color: #d04019;
+    color:whitesmoke;
 }
 
 .November {
-
+    background-color: #c49732;
+    color: whitesmoke;
 }
 
 .December {
+    background-color: #126fb0;
+    color: whitesmoke;
+}
 
-} */
+
+.significant {
+    font-size: xx-large;
+}

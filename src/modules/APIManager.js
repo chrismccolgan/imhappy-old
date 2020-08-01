@@ -8,6 +8,13 @@ export default {
                 return new Date(b.date) - new Date(a.date)
             }))
     },
+    getEntriesByUser: (id) => {
+        return fetch(`${url}/entries/?userId=${id}&_expand=category`)
+            .then(response => response.json())
+            .then(array => array.sort((a, b) => {
+                return new Date(b.date) - new Date(a.date)
+            }))
+    },
     getSingleEntry: (id) => {
         return fetch(`${url}/entries/${id}?_expand=category`)
             .then(response => response.json())

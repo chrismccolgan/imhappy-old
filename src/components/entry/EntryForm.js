@@ -32,21 +32,13 @@ const EntryForm = props => {
             .then(() => props.history.push("/"))
     }
 
-    entry.userId = 1
+    const activeUser = sessionStorage.getItem("activeUser")
+    entry.userId = parseInt(activeUser)
 
     return (
         <div className="container-form">
             <form onSubmit={constructNewEntry}>
                 <fieldset>
-                    <input
-                        className="form"
-                        id="userId"
-                        onChange={handleFieldChange}
-                        required
-                        type="hidden"
-                        value={entry.userId}
-                    />
-
                     <label htmlFor="categoryId">Category</label>
                     <br />
                     <select
