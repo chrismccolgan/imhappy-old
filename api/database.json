@@ -2,27 +2,19 @@
   "users": [
     {
       "email": "test@test.com",
+      "username": "User 1",
       "password": "test",
-      "username": "user1",
-      "birthday": "2020-01-01",
-      "accountCreated": "2020-07-01",
+      "birthday": "1990-11-26",
+      "accountCreated": "2020-07-31T20:22:45.598Z",
       "id": 1
     },
     {
-      "email": "test2@test.com",
-      "password": "test",
-      "username": "user2",
-      "birthday": "1990-02-02",
-      "accountCreated": "2020-07-03",
+      "email": "2@2.com",
+      "username": "User 2",
+      "password": "2",
+      "birthday": "2010-06-30",
+      "accountCreated": "2020-07-31T20:23:12.775Z",
       "id": 2
-    },
-    {
-      "email": "1@1.com",
-      "username": "1",
-      "password": "1",
-      "birthday": "2020-07-30",
-      "accountCreated": "2020-07-30T19:06:51.931Z",
-      "id": 3
     }
   ],
   "categories": [
@@ -39,44 +31,134 @@
   ],
   "entries": [
     {
-      "entry": "User 1 test entry",
-      "date": "2019-03-03",
-      "isSignificant": false,
-      "userId": 1,
-      "categoryId": 2,
-      "id": 1
-    },
-    {
-      "entry": "User 1 test entry 2",
-      "date": "2018-03-04",
-      "isSignificant": true,
-      "userId": 1,
+      "id": 1,
+      "entry": "Happy birthday, User 1!",
+      "date": "1990-11-26",
       "categoryId": 1,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "entry": "User 2 Cat 2 Sig",
-      "date": "2020-03-03",
-      "categoryId": 2,
       "isSignificant": true,
-      "userId": 2
+      "userId": 1
     },
     {
-      "entry": "cat 1 sig false",
-      "date": "2020-07-30",
-      "userId": 1,
+      "id": 2,
+      "entry": "Joined IMHAPPY",
+      "date": "2020-07-31",
       "categoryId": 1,
       "isSignificant": false,
+      "userId": 1
+    },
+    {
+      "entry": "Happy birthday, User 2!",
+      "date": "2010-06-30",
+      "isSignificant": true,
+      "userId": 2,
+      "categoryId": 1,
+      "id": 3
+    },
+    {
+      "entry": "Joined IMHAPPY",
+      "date": "2020-07-31",
+      "isSignificant": false,
+      "userId": 2,
+      "categoryId": 1,
       "id": 4
     },
     {
-      "entry": "cat 1 sig true",
-      "date": "2020-07-31",
+      "id": 5,
+      "entry": "Jan 1 Cat 2",
+      "date": "2020-01-01",
+      "categoryId": 2,
+      "isSignificant": false,
+      "userId": 1
+    },
+    {
+      "entry": "Feb 2 Cat 2",
+      "date": "2020-02-02",
+      "userId": 1,
+      "categoryId": 2,
+      "isSignificant": false,
+      "id": 6
+    },
+    {
+      "entry": "Mar 30 Cat 1",
+      "date": "2020-03-30",
       "userId": 1,
       "categoryId": 1,
       "isSignificant": false,
-      "id": 5
+      "id": 7
+    },
+    {
+      "entry": "Apr 23 Cat 2",
+      "date": "2020-04-23",
+      "userId": 1,
+      "categoryId": 2,
+      "isSignificant": false,
+      "id": 8
+    },
+    {
+      "entry": "May 22 Cat 1",
+      "date": "2020-05-22",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 9
+    },
+    {
+      "entry": "June 24 Cat 2",
+      "date": "2020-06-24",
+      "userId": 1,
+      "categoryId": 2,
+      "isSignificant": false,
+      "id": 10
+    },
+    {
+      "entry": "Dec 17 Cat 2",
+      "date": "2019-12-17",
+      "userId": 1,
+      "categoryId": 2,
+      "isSignificant": false,
+      "id": 11
+    },
+    {
+      "entry": "Nov 22 Cat 1",
+      "date": "2019-11-22",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 12
+    },
+    {
+      "entry": "Oct 9 Cat 2",
+      "date": "2019-10-09",
+      "userId": 1,
+      "categoryId": 2,
+      "isSignificant": false,
+      "id": 13
+    },
+    {
+      "entry": "Sep 18 Cat 2",
+      "date": "2019-09-18",
+      "userId": 1,
+      "categoryId": 2,
+      "isSignificant": false,
+      "id": 14
+    },
+    {
+      "entry": "Aug 23 Cat 1",
+      "date": "2019-08-23",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 15
+    }
+  ],
+  "tags": [
+    {
+      "tag": "tag 1 test",
+      "id": 1
+    },
+    {
+      "tag": "tag 2 test",
+      "id": 2
     }
   ]
 }
