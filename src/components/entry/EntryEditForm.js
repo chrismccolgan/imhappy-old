@@ -6,6 +6,75 @@ const EntryEditForm = props => {
 	const [entry, setEntry] = useState({ entry: "", date: "", userId: 0, categoryId: 0, isSignificant: false })
 	const [categories, setCategories] = useState([])
 	const [isLoading, setIsLoading] = useState(false)
+	const [tags, setTags] = useState([])
+	const [newTags, setNewTags] = useState ([])
+	const [allTags, setAllTags] = useState([])
+    
+    const addTags = event => {
+        if (event.keyCode === 32 && event.target.value !== "") {
+            let x = event.target.value
+            let tagTest = false
+            x = x.slice(0, -1)
+            let tagObj = {
+                tag: x,
+                id: 0
+            }
+            
+            allTags.find(tag => {
+                if (tagObj.tag === tag.tag) {
+                    tagObj.id = tag.id
+					setTags ([...tags, tagObj])
+					setNewTags ([...newTags, tagObj])
+                    return tagTest = true
+                }
+            })
+            
+            if (tagTest === false) {
+                APIManager.saveTags(tagObj)
+                .then(() => APIManager.getAllTags()
+                .then(response => response.find(tag => {
+                    if (tagObj.tag === tag.tag) {
+                                tagObj.id = tag.id
+                                setTags([...tags, tag])
+								setAllTags([...allTags, tag])
+								setNewTags([...newTags, tag])
+                            }
+                        }))
+                        )
+                    }
+                    
+                    event.target.value = ""
+                }
+            }
+            
+	const removeTags = index => {
+		setTags([...tags.filter(tag => tags.indexOf(tag) !== index)]);
+	}
+	
+	const getAllTags = () => {
+		return APIManager.getAllTags().then(tagsFromAPI => {
+			setAllTags(tagsFromAPI)
+		})
+	}
+	
+	useEffect(() => {
+		getAllTags()
+	}, [])
+
+	const getTags = () => {
+		let tagArray = []
+		return APIManager.getAllEntryTags(props.match.params.entryId)
+			.then(entryTags => {
+				entryTags.forEach(tag => {
+					tagArray.push(tag.tag)
+				})
+				setTags(tagArray)
+			})
+	}
+
+	useEffect(() => {
+		getTags()
+	}, [])
 
 	const getCategories = () => {
 		return APIManager.getAllCategories()
@@ -45,14 +114,21 @@ const EntryEditForm = props => {
 			isSignificant: entry.isSignificant,
 			userId: entry.userId
 		}
+		newTags.forEach(tag => {
+			let entryTagObj = {
+				tagId: tag.id,
+				entryId: parseInt(props.match.params.entryId)
+			}
+			APIManager.saveEntryTag(entryTagObj)
+		})
 		APIManager.editEntry(editedEntry)
 			.then(() => props.history.push("/"))
 	}
 
-	const deleteEntry = () => {
-	    APIManager.deleteAnEntry(props.match.params.entryId)
-	        .then(() => props.history.push("/"))
-	}
+	// const deleteEntry = () => {
+	//     APIManager.deleteAnEntry(props.match.params.entryId)
+	//         .then(() => props.history.push("/"))
+	// }
 
 	return (
 		<div className="container-form">
@@ -111,8 +187,30 @@ const EntryEditForm = props => {
 					</select>
 					<br />
 
-					<button disabled={isLoading} type="submit">Submit</button>
-					<button disabled={isLoading} onClick={deleteEntry} type="button">Delete</button>
+                    <span>Tags</span>
+                    <br />
+                    <div className="tags-input">
+                        <input
+                            className="mainInput form"
+                            type="text"
+                            onKeyUp={event => addTags(event)}
+                            placeholder=""
+                        />
+                        <ul>
+                            {tags.map((tag, index) => (
+                                <li key={index}>
+                                    <span className="tag">{tag.tag}</span>
+                                    {" "}
+                                    <span className="close" onClick={() => removeTags(index)}>x</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+					
+					<button disabled={isLoading} type="submit">Save entry</button>
+					{/* {" "}
+					<button disabled={isLoading} onClick={deleteEntry} type="button">Delete entry</button> */}
+
 				</fieldset>
 			</form>
 		</div>

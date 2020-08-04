@@ -15,6 +15,14 @@
       "birthday": "2010-06-30",
       "accountCreated": "2020-07-31T20:23:12.775Z",
       "id": 2
+    },
+    {
+      "email": "test22@2.com",
+      "username": "test",
+      "password": "2",
+      "birthday": "2020-08-02",
+      "accountCreated": "2020-08-04T18:20:45.604Z",
+      "id": 3
     }
   ],
   "categories": [
@@ -27,6 +35,16 @@
       "category": "test 2",
       "icon": "💀",
       "id": 2
+    },
+    {
+      "category": "zzzzzzz",
+      "icon": "z",
+      "id": 3
+    },
+    {
+      "category": "yyy",
+      "icon": "y",
+      "id": 4
     }
   ],
   "entries": [
@@ -149,15 +167,59 @@
       "categoryId": 1,
       "isSignificant": false,
       "id": 15
+    },
+    {
+      "id": 16,
+      "entry": "Held a chicken for the first time",
+      "date": "2020-08-02",
+      "categoryId": 1,
+      "isSignificant": false,
+      "userId": 1
+    },
+    {
+      "entry": "Happy birthday, test!",
+      "date": "2020-08-02",
+      "isSignificant": true,
+      "userId": 3,
+      "categoryId": 1,
+      "id": 17
+    },
+    {
+      "entry": "Joined IMHAPPY",
+      "date": "2020-08-04",
+      "isSignificant": false,
+      "userId": 3,
+      "categoryId": 1,
+      "id": 18
+    },
+    {
+      "entry": "teetsaedsfsa",
+      "date": "2017-02-04",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 19
     }
   ],
   "tags": [
     {
-      "tag": "tag 1 test",
+      "tag": "test",
       "id": 1
     },
     {
-      "tag": "tag 2 test",
+      "tag": "test2",
+      "id": 2
+    }
+  ],
+  "entryTags": [
+    {
+      "entryId": 19,
+      "tagId": 1,
+      "id": 1
+    },
+    {
+      "entryId": 19,
+      "tagId": 2,
       "id": 2
     }
   ]

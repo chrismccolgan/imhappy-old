@@ -16,7 +16,7 @@ export default {
             }))
     },
     getSingleEntry: (id) => {
-        return fetch(`${url}/entries/${id}?_expand=category`)
+        return fetch(`${url}/entries/${id}?_expand=category&_embed=entryTags`)
             .then(response => response.json())
     },
     saveEntry: (newEntry) => {
@@ -62,5 +62,37 @@ export default {
     getAllCategories: () => {
         return fetch(`${url}/categories`)
             .then(response => response.json())
+            .then(array => array.sort((a, b) => a.category.localeCompare(b.category)))
+    },
+    getAllTags: () => {
+        return fetch(`${url}/tags`)
+            .then(response => response.json())
+    },
+    saveTags: (tag) => {
+        return fetch(`${url}/tags`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(tag)
+        }).then(response => response.json())
+    },
+    getAllEntryTags: (entryId) => {
+        return fetch(`${url}/entryTags/?entryId=${entryId}&_expand=tag`)
+            .then(response => response.json())
+    },
+    saveEntryTag: (entryTag) => {
+        return fetch(`${url}/entryTags`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(entryTag)
+        }).then(response => response.json())
+    },
+    deleteEntryTags: (entryId) => {
+        return fetch(`${url}/entryTags/?entryId=${entryId}`, {
+            method: "DELETE",
+        }).then(response => response.json())
     }
 }

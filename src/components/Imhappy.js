@@ -12,10 +12,14 @@ const Imhappy = () => {
         setHasUser(isAuthenticated())
     }
 
+    const clearUser = () => {
+        sessionStorage.clear();
+        setHasUser(isAuthenticated());
+      }
 
     return (
         <React.Fragment>
-            <NavBar hasUser={hasUser} />
+            <NavBar hasUser={hasUser} clearUser={clearUser} />
             <ApplicationViews hasUser={hasUser} setUser={setUser} />
         </React.Fragment>
     );

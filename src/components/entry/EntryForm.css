@@ -1,0 +1,17 @@
+fieldset {
+    all: unset;
+}
+
+.container-form {
+    padding: 0.75rem
+}
+
+.form {
+    width: 90vw;
+    max-width: 350px;
+    min-width: 290px;
+}
+
+.close:hover {
+    cursor: pointer;
+}

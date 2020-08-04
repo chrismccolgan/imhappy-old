@@ -21,10 +21,12 @@ const EntryCard = props => {
 			<span className="card-date">{dateString}:</span>
 			{" "}
 			<span className="card-entry">{props.entry.entry}</span>
-			<span className="material-icons card-buttons-edit" onClick={() => props.history.push(`/entries/${props.entry.id}/edit`)}>edit</span>
+			<div className="card-buttons">
+				<i className="material-icons card-buttons-delete" onClick={() => props.deleteEntry(props.entry.id)}>delete</i>
+				<i className="material-icons card-buttons-edit" onClick={() => props.history.push(`/entries/${props.entry.id}/edit`)}>edit</i>
+			</div>
 		</div>
 	)
 }
 
 export default EntryCard
-/* <i className="material-icons card-buttons-delete" onClick={() => props.deleteEntry(props.entry.id)}>delete</i> */

@@ -17,10 +17,10 @@ const EntryList = props => {
         getEntries()
     }, [])
 
-    // const deleteEntry = id => {
-    //     APIManager.deleteAnEntry(id)
-    //         .then(() => APIManager.getEntriesByUser(activeUser).then(setEntries))
-    // }
+    const deleteEntry = id => {
+        APIManager.deleteAnEntry(id)
+            .then(() => APIManager.getEntriesByUser(activeUser).then(setEntries))
+    }
 
     return (
         <div className="container-cards">
@@ -28,7 +28,7 @@ const EntryList = props => {
                 <EntryCard
                     key={entry.id}
                     entry={entry}
-                    // deleteEntry={deleteEntry}
+                    deleteEntry={deleteEntry}
                     {...props}
                 />
             )}
