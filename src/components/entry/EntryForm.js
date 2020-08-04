@@ -6,35 +6,101 @@ const EntryForm = props => {
     const [entry, setEntry] = useState({ entry: "", date: "", userId: 0, categoryId: 0, isSignificant: false })
     const [categories, setCategories] = useState([])
     const [isLoading, setIsLoading] = useState(false)
+    const [tags, setTags] = useState([])
+    const [allTags, setAllTags] = useState([])
+    
+    const activeUser = sessionStorage.getItem("activeUser")
+    
+    const addTags = event => {
+        if (event.keyCode === 32 && event.target.value !== "") {
+            let x = event.target.value
+            let tagTest = false
+            x = x.slice(0, -1)
+            let tagObj = {
+                tag: x,
+                id: 0
+            }
+            
+            allTags.find(tag => {
+                if (tagObj.tag === tag.tag) {
+                    tagObj.id = tag.id
+                    setTags ([...tags, tagObj])
+                    return tagTest = true
+                }
+            })
+            
+            if (tagTest === false) {
+                APIManager.saveTags(tagObj)
+                .then(() => APIManager.getAllTags()
+                .then(response => response.find(tag => {
+                    if (tagObj.tag === tag.tag) {
+                                tagObj.id = tag.id
+                                setTags([...tags, tag])
+                                setAllTags([...allTags, tag])
+                            }
+                        }))
+                        )
+                    }
+                    
+                    event.target.value = ""
+                }
+            }
+            
+        const removeTags = index => {
+            setTags([...tags.filter(tag => tags.indexOf(tag) !== index)]);
+        }
+        
+        const getTags = () => {
+            return APIManager.getAllTags().then(tagsFromAPI => {
+                setAllTags(tagsFromAPI)
+            })
+        }
+        
+        useEffect(() => {
+            getTags()
+        }, [])
 
-    const getCategories = () => {
-        return APIManager.getAllCategories().then(categoriesFromAPI => {
-            setCategories(categoriesFromAPI)
-        })
-    }
+        const getCategories = () => {
+            return APIManager.getAllCategories().then(categoriesFromAPI => {
+                setCategories(categoriesFromAPI)
+            })
+        }
+        
+        useEffect(() => {
+            getCategories()
+        }, [])
+        
 
-    useEffect(() => {
-        getCategories()
-    }, [])
-
-    const handleFieldChange = evt => {
+        const handleFieldChange = evt => {
         const stateToChange = { ...entry }
         stateToChange[evt.target.id] = evt.target.value
         setEntry(stateToChange)
     }
-
+    
     const constructNewEntry = evt => {
         evt.preventDefault()
         setIsLoading(true)
         entry.isSignificant = JSON.parse(entry.isSignificant)
         entry.categoryId = parseInt(entry.categoryId)
         APIManager.saveEntry(entry)
-            .then(() => props.history.push("/"))
+            .then(() => APIManager.getEntriesByUser(activeUser)
+                .then(results => results.find(anEntry => {
+                    if (anEntry.entry === entry.entry) {
+                        tags.forEach(tag => {
+                            let entryTagObj = {
+                                entryId: anEntry.id,
+                                tagId: tag.id
+                            }
+                            APIManager.saveEntryTag(entryTagObj)
+                        })
+                    }
+                }))
+            )
+        .then(() => props.history.push("/"))
     }
-
-    const activeUser = sessionStorage.getItem("activeUser")
+    
     entry.userId = parseInt(activeUser)
-
+    
     return (
         <div className="container-form">
             <form onSubmit={constructNewEntry}>
@@ -91,6 +157,26 @@ const EntryForm = props => {
                         <option value="true">True</option>
                     </select>
                     <br />
+
+                    <span>Tags</span>
+                    <br />
+                    <div className="tags-input">
+                        <input
+                            className="mainInput form"
+                            type="text"
+                            onKeyUp={event => addTags(event)}
+                            placeholder=""
+                        />
+                        <ul>
+                            {tags.map((tag, index) => (
+                                <li key={index}>
+                                    <span className="tag">{tag.tag}</span>
+                                    {" "}
+                                    <span className="close" onClick={() => removeTags(index)}>x</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
                     <button disabled={isLoading} type="submit">Save entry</button>
                 </fieldset>

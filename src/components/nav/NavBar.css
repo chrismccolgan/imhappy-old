@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-ul {
+    background-color: #333;
+    font-size: large;
+}
+
+.nav-li {
+    display: inline-block;
+    vertical-align: middle;
+    color:whitesmoke;
+    padding: 0.75rem;
+    padding-inline-end: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav-title {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    color: #111
+}
+
+/* li span {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+} */

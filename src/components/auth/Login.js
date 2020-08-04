@@ -80,14 +80,15 @@ const Login = props => {
 	return (
 		<div className="container-login-register">
 			<div className="container-login">
+				<span className="form-heading">Log in</span>
 				<form onSubmit={handleLogin}>
 					<fieldset>
 						<label htmlFor="email">Email</label>
 						<br />
 						<input
+							className="form"
 							id="email"
 							onChange={handleFieldChange}
-							placeholder="Email address"
 							required
 							type="email"
 						/>
@@ -96,31 +97,30 @@ const Login = props => {
 						<label htmlFor="password">Password</label>
 						<br />
 						<input
+							className="form"
 							id="password"
 							onChange={handleFieldChange}
-							placeholder="Password"
 							required
 							type="password"
 						/>
 						<br />
 
-						<button disabled={isLoading} type="submit">Sign in</button>
+						<button disabled={isLoading} type="submit">Log in</button>
 					</fieldset>
 				</form>
 			</div>
 
-			<hr />
-
 			<div className="container-register">
+				<span className="form-heading">Create a new account</span>
 				<form onSubmit={handleRegister}>
 					<fieldset>
 						<label htmlFor="registerUsername">Username</label>
 						<br />
 						<input
+							className="form"
 							id="registerUsername"
 							name="username"
 							onChange={handleFieldChange2}
-							placeholder=""
 							required
 							type="text"
 						/>
@@ -129,10 +129,10 @@ const Login = props => {
 						<label htmlFor="registerEmail">Email</label>
 						<br />
 						<input
+							className="form"
 							id="registerEmail"
 							name="email"
 							onChange={handleFieldChange2}
-							placeholder=""
 							required
 							type="email"
 						/>
@@ -141,10 +141,10 @@ const Login = props => {
 						<label htmlFor="registerPassword">Password</label>
 						<br />
 						<input
+							className="form"
 							id="registerPassword"
 							name="password"
 							onChange={handleFieldChange2}
-							placeholder=""
 							required
 							type="password"
 						/>
@@ -153,10 +153,10 @@ const Login = props => {
 						<label htmlFor="registerConfirmPassword">Confirm password</label>
 						<br />
 						<input
+							className="form"
 							id="registerConfirmPassword"
 							name="confirmPassword"
 							onChange={testPassword}
-							placeholder=""
 							required
 							type="password"
 						/>
@@ -165,16 +165,16 @@ const Login = props => {
 						<label htmlFor="registerBirthday">Birthday</label>
 						<br />
 						<input
+							className="form"
 							id="registerBirthday"
 							name="birthday"
 							onChange={handleFieldChange2}
-							placeholder=""
 							required
 							type="date"
 						/>
 						<br />
 
-						<button disabled={isLoading} type="submit">Register account</button>
+						<button disabled={isLoading} type="submit">Sign up</button>
 					</fieldset>
 				</form>
 			</div>
