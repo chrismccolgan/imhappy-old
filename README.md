@@ -1,69 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# IMHAPPY
+IMHAPPY is a web app with full CRUD functionality that allows the user to journal happy moments of their life. The entries are then sorted into a colorful list in descending order that the user can look at, reminisce on, and improve their mood at any time.
 
-## Available Scripts
+* **Responsive:** IMHAPPY was designed with responsiveness in mind, it will look good at any screen size.
+* **Colorful:** Every month for each entry has its own background color. The more entries the user makes, the more colorful the app becomes.
+* **CRUD:** IMHAPPY entries contain full CRUD (Create, Read, Update, Destroy) functionality.
 
-In the project directory, you can run:
+Technologies used to create IMHAPPY include [React.js](https://github.com/facebook/create-react-app), [JSON server](https://github.com/typicode/json-server), [Google Material design icons](https://github.com/google/material-design-icons), JavaScript, CSS, and HTML.
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# imhappy
+ 
+## Installation
+1. Clone this repository.
+1. `cd` into the directory it creates.
+1. `npm install` to install react.js.
+1. Make a `database.json` file in the `api` directory, or use the existing `sample.json` file.
+1. While inside the `api` directory, enter `json-server -p 5002 -w database.json` to serve the JSON file.
+1. `cd` into the main directory and `npm start` to make the app accessible via a web browser.
+ 
+## Using IMHAPPY
+1. Register a new account. **Do not use any sensitive credentials. This is not a secure application.**
+1. Log in with the credentials you created, or use the credentials provided in the `sample.json`, `me@me.com:test`.
+1. Two entries will be automatically generated: one for the date you registered for IMHAPPY, and another for the birth date entered on the registration form.
+1. To create a new entry, click the "What made you happy?" link located at the top.
+1. Fill out all the fields in the new entry form.
+    * **Category:** Categorize your happy moment with the category dropdown. An icon representation of the category will appear at the start of each entry.
+    * **Date:** Enter the date your happy moment occurred. Entries are sorted by date in descending order. The background color for each entry changes depending on the month for each entry.
+    * **Entry:** Write about your happy moment here.
+    * **Significant:** The entries for the happy moments marked as significant will be displayed with xx-large font size.
+1. To edit an entry, hover over an existing entry and click the pencil-shaped button that appears to the right.
+1. To delete an entry, hover over an existing entry and click the trash can-shaped button that appears to the right.
