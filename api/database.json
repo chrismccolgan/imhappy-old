@@ -215,8 +215,8 @@
     },
     {
       "id": 5,
-      "entry": "Best New Years so far! 2020 is gonna be the best year ever!",
-      "date": "2020-01-01",
+      "entry": "Lorem ipsum dolor sit amet",
+      "date": "2019-01-01",
       "categoryId": 9,
       "isSignificant": false,
       "userId": 1
@@ -224,7 +224,7 @@
     {
       "id": 6,
       "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "date": "2020-02-14",
+      "date": "2019-02-14",
       "categoryId": 6,
       "isSignificant": false,
       "userId": 1
@@ -232,7 +232,7 @@
     {
       "id": 7,
       "entry": "Won the lottery",
-      "date": "2020-03-31",
+      "date": "2019-03-31",
       "categoryId": 4,
       "isSignificant": false,
       "userId": 1
@@ -240,7 +240,7 @@
     {
       "id": 9,
       "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "date": "2020-07-27",
+      "date": "2019-07-27",
       "categoryId": 17,
       "isSignificant": false,
       "userId": 1
@@ -256,7 +256,7 @@
     {
       "id": 11,
       "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "date": "2020-04-01",
+      "date": "2019-04-01",
       "categoryId": 18,
       "isSignificant": false,
       "userId": 1
@@ -264,7 +264,7 @@
     {
       "id": 12,
       "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "date": "2020-06-01",
+      "date": "2019-06-01",
       "categoryId": 13,
       "isSignificant": false,
       "userId": 1
@@ -294,20 +294,20 @@
       "id": 17
     },
     {
+      "id": 18,
       "entry": "Lorem ipsum dolor sit amet",
       "date": "2019-12-05",
-      "userId": 1,
       "categoryId": 2,
-      "isSignificant": false,
-      "id": 18
+      "isSignificant": true,
+      "userId": 1
     },
     {
+      "id": 19,
       "entry": "Lorem ipsum dolor",
       "date": "2019-11-03",
-      "userId": 1,
       "categoryId": 11,
       "isSignificant": false,
-      "id": 19
+      "userId": 1
     },
     {
       "id": 20,
@@ -320,10 +320,26 @@
     {
       "id": 21,
       "entry": "Lorem ipsum dolor sit amet",
-      "date": "2020-01-02",
+      "date": "2019-05-02",
       "categoryId": 1,
       "isSignificant": false,
       "userId": 1
+    },
+    {
+      "id": 22,
+      "entry": "Lorem ipsum dolor sit amet",
+      "date": "2019-12-19",
+      "categoryId": 4,
+      "isSignificant": false,
+      "userId": 1
+    },
+    {
+      "entry": "Lorem ipsum dolor sit amet",
+      "date": "2019-12-22",
+      "userId": 1,
+      "categoryId": 1,
+      "isSignificant": false,
+      "id": 23
     }
   ],
   "tags": [
