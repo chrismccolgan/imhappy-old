@@ -4,13 +4,13 @@ import Home from "./home/Home"
 import EntryList from "./entry/EntryList"
 import EntryForm from "./entry/EntryForm"
 import EntryEditForm from "./entry/EntryEditForm"
-import Login from "./auth/Login";
+import Login from "./auth/Login"
 
 const ApplicationViews = (props) => {
     const hasUser = props.hasUser
     const setUser = props.setUser
     return (
-        <React.Fragment>
+        <>
             <Route
                 path="/login"
                 render={props => {
@@ -54,7 +54,7 @@ const ApplicationViews = (props) => {
                         return <Redirect to="/login" />
                     }
                 }} />
-        </React.Fragment>
+        </>
     )
 }
 

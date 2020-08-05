@@ -89,10 +89,5 @@ export default {
             },
             body: JSON.stringify(entryTag)
         }).then(response => response.json())
-    },
-    deleteEntryTags: (entryId) => {
-        return fetch(`${url}/entryTags/?entryId=${entryId}`, {
-            method: "DELETE",
-        }).then(response => response.json())
     }
 }
