@@ -29,13 +29,5 @@ li a {
 
 .nav-link:hover {
     cursor: pointer;
-    color: #111
+    color: #111;
 }
-
-/* li span {
-    position: absolute;
-    right: 0.5rem;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-} */
