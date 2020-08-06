@@ -8,9 +8,7 @@ IMHAPPY is a web app with full CRUD functionality that allows the user to journa
 Technologies used to create IMHAPPY include [React.js](https://github.com/facebook/create-react-app), [JSON server](https://github.com/typicode/json-server), [Google Material design icons](https://github.com/google/material-design-icons), JavaScript, CSS, and HTML.
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg1.png">
-<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg2.png" width=50% height=50%>
-<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg3.png" width=50% height=50%>
+<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg1.png"><img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg3.png" width=50% height=50%><img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg2.png" width=50% height=50%>
  
 ## Installation
 1. Clone this repository.
