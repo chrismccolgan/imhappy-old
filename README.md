@@ -9,7 +9,8 @@ Technologies used to create IMHAPPY include [React.js](https://github.com/facebo
 
 ## Screenshots
 <img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg1.png" width=768px>
-<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg2.png" width=320px> <img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg3.png" width=320px>
+<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg2.png" width=320px>
+<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg3.png" width=320px>
  
 ## Installation
 1. Clone this repository.
