@@ -341,27 +341,5 @@
       "isSignificant": false,
       "id": 23
     }
-  ],
-  "tags": [
-    {
-      "tag": "chicken",
-      "id": 1
-    },
-    {
-      "tag": "firsts",
-      "id": 2
-    }
-  ],
-  "entryTags": [
-    {
-      "tagId": 1,
-      "entryId": 20,
-      "id": 1
-    },
-    {
-      "tagId": 2,
-      "entryId": 20,
-      "id": 2
-    }
   ]
 }
