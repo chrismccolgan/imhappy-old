@@ -16,7 +16,7 @@ Technologies used to create IMHAPPY include [React.js](https://github.com/facebo
 1. Clone this repository.
 1. `cd` into the directory it creates.
 1. `npm install` to install React.js.
-1. Make a `database.json` file in the `api` directory, or use the existing `sample.json` file.
+1. Create a `database.json` file in the `api` directory, or rename the existing `sample.json` file.
 1. While inside the `api` directory, enter `json-server -p 5002 -w database.json` to serve the JSON file.
 1. `cd` into the main directory and `npm start` to make the app accessible via a web browser.
  
