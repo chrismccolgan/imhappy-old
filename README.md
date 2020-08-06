@@ -22,7 +22,7 @@ Technologies used to create IMHAPPY include [React.js](https://github.com/facebo
 1. Register a new account. **Do not use any sensitive credentials. This is not a secure application.**
 1. Log in with the credentials you created, or use the credentials provided in the `sample.json`, `me@me.com:test`.
 1. Two entries will be automatically generated: one for the date you registered for IMHAPPY, and another for the birth date entered on the registration form.
-1. To create a new entry, click the "What made you happy?" link located at the top.
+1. To create a new entry, click the "What made you happy today?" link located at the top.
 1. Fill out all the fields in the new entry form.
     * **Category:** Categorize your happy moment with the category dropdown. An icon representation of the category will appear at the start of each entry.
     * **Date:** Enter the date your happy moment occurred. Entries are sorted by date in descending order. The background color for each entry changes depending on the month for each entry.
