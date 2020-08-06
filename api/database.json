@@ -181,19 +181,14 @@
       "id": 34
     },
     {
-      "category": "Vote",
-      "icon": "🗳",
+      "category": "Mindblown",
+      "icon": "🤯",
       "id": 35
     },
     {
       "category": "Baby",
       "icon": "👶",
       "id": 36
-    },
-    {
-      "category": "Mindblown",
-      "icon": "🤯",
-      "id": 37
     }
   ],
   "entries": [
