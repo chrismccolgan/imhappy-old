@@ -298,7 +298,7 @@
       "entry": "Lorem ipsum dolor sit amet",
       "date": "2019-12-05",
       "categoryId": 2,
-      "isSignificant": true,
+      "isSignificant": false,
       "userId": 1
     },
     {
