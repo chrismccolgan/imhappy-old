@@ -1,14 +1,14 @@
 # IMHAPPY
 IMHAPPY is a web app with full CRUD functionality that allows the user to journal happy moments of their life. The entries are then sorted into a colorful list in descending order that the user can look at, reminisce on, and improve their mood at any time.
 
+* **Colorful:** Every month for each entry has its own background color. The more entries the user makes, the more colorful the app becomes!
 * **Responsive:** IMHAPPY was designed with responsiveness in mind, it will look good at any screen size.
-* **Colorful:** Every month for each entry has its own background color. The more entries the user makes, the more colorful the app becomes.
 * **CRUD:** IMHAPPY entries contain full CRUD (Create, Read, Update, Destroy) functionality.
 
 Technologies used to create IMHAPPY include [React.js](https://github.com/facebook/create-react-app), [JSON server](https://github.com/typicode/json-server), [Google Material design icons](https://github.com/google/material-design-icons), JavaScript, CSS, and HTML.
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg1.png"><img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg3.png" width=50% height=50%><img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg2.png" width=50% height=50%>
+<img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg1.png" width=768px height=714px><img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg2.png" width=320px height=568px> <img src="https://raw.githubusercontent.com/chrismccolgan/imhappy/master/public/readmeimg3.png" width=320px height=568px>
  
 ## Installation
 1. Clone this repository.
