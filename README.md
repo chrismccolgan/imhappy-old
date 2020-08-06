@@ -2,7 +2,7 @@
 IMHAPPY is a web app with full CRUD functionality that allows the user to journal happy moments of their life. The entries are then sorted into a colorful list in descending order that the user can look at, reminisce on, and improve their mood at any time.
 
 * **Colorful:** Every month for each entry has its own background color. The more entries the user makes, the more colorful the app becomes!
-* **Responsive:** IMHAPPY was designed with responsiveness in mind, it will work at any screen size.
+* **Responsive:** IMHAPPY was designed with responsiveness in mind, it will adjust to any screen size.
 * **CRUD:** IMHAPPY entries contain full CRUD (Create, Read, Update, Destroy) functionality.
 
 Technologies used to create IMHAPPY include [React.js](https://github.com/facebook/create-react-app), [JSON server](https://github.com/typicode/json-server), [Google Material design icons](https://github.com/google/material-design-icons), JavaScript, CSS, and HTML.
