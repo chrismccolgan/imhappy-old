@@ -181,14 +181,19 @@
       "id": 34
     },
     {
-      "category": "Mindblown",
-      "icon": "🤯",
+      "category": "Vote",
+      "icon": "🗳",
       "id": 35
     },
     {
       "category": "Baby",
       "icon": "👶",
       "id": 36
+    },
+    {
+      "category": "Mindblown",
+      "icon": "🤯",
+      "id": 37
     }
   ],
   "entries": [
@@ -335,6 +340,28 @@
       "categoryId": 1,
       "isSignificant": false,
       "id": 23
+    }
+  ],
+  "tags": [
+    {
+      "tag": "chicken",
+      "id": 1
+    },
+    {
+      "tag": "firsts",
+      "id": 2
+    }
+  ],
+  "entryTags": [
+    {
+      "tagId": 1,
+      "entryId": 20,
+      "id": 1
+    },
+    {
+      "tagId": 2,
+      "entryId": 20,
+      "id": 2
     }
   ]
 }

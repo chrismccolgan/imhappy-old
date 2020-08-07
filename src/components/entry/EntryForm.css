@@ -11,3 +11,17 @@ fieldset {
     max-width: 350px;
     min-width: 290px;
 }
+
+.close:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.li-tag {
+    display: inline-block;
+    margin: 2px 0.25rem 0 0;
+    padding: 0.1rem 0.25rem;
+    border: 0.5px solid rgb(118, 118, 118);
+    border-radius: 2px;
+    font-size: 82%;
+}
