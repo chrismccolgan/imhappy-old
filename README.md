@@ -16,12 +16,13 @@ Technologies used to create IMHAPPY include [React.js](https://github.com/facebo
 1. Clone this repository.
 1. `cd` into the directory it creates.
 1. `npm install` to install React.js.
-1. `cd` into the `api` directory and enter `json-server -p 5002 -w database.json` to serve the `database.json` file.
+1. Make a `database.json` file in the `api` directory, or use the existing `sample.json` file.
+1. While inside the `api` directory, enter `json-server -p 5002 -w database.json` to serve the JSON file.
 1. `cd` into the main directory and `npm start` to make the app accessible via a web browser.
  
 ## Using IMHAPPY
 1. Register a new account. **Do not use any sensitive credentials. This is not a secure application.**
-1. Log in with the credentials you created, or use the credentials already provided in the `database.json`, `me@me.com:test`.
+1. Log in with the credentials you created, or use the credentials provided in the `sample.json`, `me@me.com:test`.
 1. Two entries will be automatically generated: one for the date you registered for IMHAPPY, and another for the birth date entered on the registration form.
 1. To create a new entry, click the "What made you happy today?" link located at the top.
 1. Fill out all the fields in the new entry form.

@@ -1,0 +1,367 @@
+{
+    "users": [
+        {
+            "email": "me@me.com",
+            "username": "Chris",
+            "password": "test",
+            "birthday": "1990-11-26",
+            "accountCreated": "2020-08-04T23:03:20.458Z",
+            "id": 1
+        }
+    ],
+    "categories": [
+        {
+            "category": "Smile",
+            "icon": "😀",
+            "id": 1
+        },
+        {
+            "category": "Heart",
+            "icon": "💖",
+            "id": 2
+        },
+        {
+            "category": "Birthday cake",
+            "icon": "🎂",
+            "id": 3
+        },
+        {
+            "category": "Lucky",
+            "icon": "🍀",
+            "id": 4
+        },
+        {
+            "category": "Chicken",
+            "icon": "🐔",
+            "id": 5
+        },
+        {
+            "category": "Eggplant",
+            "icon": "🍆",
+            "id": 6
+        },
+        {
+            "category": "Present",
+            "icon": "🎁",
+            "id": 7
+        },
+        {
+            "category": "Sun",
+            "icon": "🌞",
+            "id": 8
+        },
+        {
+            "category": "Party 1",
+            "icon": "🥳",
+            "id": 9
+        },
+        {
+            "category": "Party 2",
+            "icon": "🎉",
+            "id": 10
+        },
+        {
+            "category": "Flex",
+            "icon": "💪",
+            "id": 11
+        },
+        {
+            "category": "Superhero",
+            "icon": "🦸‍♂️",
+            "id": 12
+        },
+        {
+            "category": "Music",
+            "icon": "🎵",
+            "id": 13
+        },
+        {
+            "category": "Clap",
+            "icon": "👏",
+            "id": 14
+        },
+        {
+            "category": "Kiss",
+            "icon": "💋",
+            "id": 15
+        },
+        {
+            "category": "Laugh",
+            "icon": "😆",
+            "id": 16
+        },
+        {
+            "category": "Brain",
+            "icon": "🧠",
+            "id": 17
+        },
+        {
+            "category": "Dog",
+            "icon": "🐶",
+            "id": 18
+        },
+        {
+            "category": "Cat",
+            "icon": "🐱",
+            "id": 19
+        },
+        {
+            "category": "Chef",
+            "icon": "👨‍🍳",
+            "id": 20
+        },
+        {
+            "category": "Thumbs up",
+            "icon": "👍",
+            "id": 21
+        },
+        {
+            "category": "Sports",
+            "icon": "🏈",
+            "id": 22
+        },
+        {
+            "category": "Fancy",
+            "icon": "🎩",
+            "id": 23
+        },
+        {
+            "category": "Scholar",
+            "icon": "🎓",
+            "id": 24
+        },
+        {
+            "category": "Trophy",
+            "icon": "🏆",
+            "id": 25
+        },
+        {
+            "category": "Flower",
+            "icon": "🌻",
+            "id": 26
+        },
+        {
+            "category": "Car",
+            "icon": "🚗",
+            "id": 27
+        },
+        {
+            "category": "Airplane",
+            "icon": "✈",
+            "id": 28
+        },
+        {
+            "category": "Home",
+            "icon": "🏠",
+            "id": 29
+        },
+        {
+            "category": "Rainbow",
+            "icon": "🌈",
+            "id": 30
+        },
+        {
+            "category": "Popcorn",
+            "icon": "🍿",
+            "id": 31
+        },
+        {
+            "category": "Tree",
+            "icon": "🌲",
+            "id": 32
+        },
+        {
+            "category": "Drinks",
+            "icon": "🍻",
+            "id": 33
+        },
+        {
+            "category": "Loved",
+            "icon": "🥰",
+            "id": 34
+        },
+        {
+            "category": "Vote",
+            "icon": "🗳",
+            "id": 35
+        },
+        {
+            "category": "Baby",
+            "icon": "👶",
+            "id": 36
+        },
+        {
+            "category": "Mindblown",
+            "icon": "🤯",
+            "id": 37
+        }
+    ],
+    "entries": [
+        {
+            "entry": "Happy birthday, Chris!",
+            "date": "1990-11-26",
+            "isSignificant": true,
+            "userId": 1,
+            "categoryId": 3,
+            "id": 1
+        },
+        {
+            "entry": "Joined IMHAPPY",
+            "date": "2020-08-04",
+            "isSignificant": false,
+            "userId": 1,
+            "categoryId": 1,
+            "id": 2
+        },
+        {
+            "id": 5,
+            "entry": "Lorem ipsum dolor sit amet",
+            "date": "2019-01-01",
+            "categoryId": 9,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 6,
+            "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "date": "2019-02-14",
+            "categoryId": 6,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 7,
+            "entry": "Won the lottery",
+            "date": "2019-03-31",
+            "categoryId": 4,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 9,
+            "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "date": "2019-07-27",
+            "categoryId": 17,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 10,
+            "entry": "Started school at NSS",
+            "date": "2020-05-18",
+            "categoryId": 24,
+            "isSignificant": true,
+            "userId": 1
+        },
+        {
+            "id": 11,
+            "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "date": "2019-04-01",
+            "categoryId": 18,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 12,
+            "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "date": "2019-06-01",
+            "categoryId": 13,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 14,
+            "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "date": "2019-12-25",
+            "categoryId": 7,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 15,
+            "entry": "Lorem ipsum dolor sit",
+            "date": "2019-10-06",
+            "categoryId": 1,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "entry": "Lorem ipsum dolor sit",
+            "date": "2019-09-03",
+            "userId": 1,
+            "categoryId": 25,
+            "isSignificant": false,
+            "id": 17
+        },
+        {
+            "id": 18,
+            "entry": "Lorem ipsum dolor sit amet",
+            "date": "2019-12-05",
+            "categoryId": 2,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 19,
+            "entry": "Lorem ipsum dolor",
+            "date": "2019-11-03",
+            "categoryId": 11,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 20,
+            "entry": "Held a chicken for the first time",
+            "date": "2020-08-02",
+            "categoryId": 5,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 21,
+            "entry": "Lorem ipsum dolor sit amet",
+            "date": "2019-05-02",
+            "categoryId": 1,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "id": 22,
+            "entry": "Lorem ipsum dolor sit amet",
+            "date": "2019-12-19",
+            "categoryId": 4,
+            "isSignificant": false,
+            "userId": 1
+        },
+        {
+            "entry": "Lorem ipsum dolor sit amet",
+            "date": "2019-12-22",
+            "userId": 1,
+            "categoryId": 1,
+            "isSignificant": false,
+            "id": 23
+        }
+    ],
+    "tags": [
+        {
+            "tag": "chicken",
+            "id": 1
+        },
+        {
+            "tag": "firsts",
+            "id": 2
+        }
+    ],
+    "entryTags": [
+        {
+            "tagId": 1,
+            "entryId": 20,
+            "id": 1
+        },
+        {
+            "tagId": 2,
+            "entryId": 20,
+            "id": 2
+        }
+    ]
+}
