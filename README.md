@@ -1,5 +1,5 @@
 # IMHAPPY
-IMHAPPY is a web app with full CRUD functionality that allows the user to journal happy moments of their life. The entries are then sorted into a colorful list in descending order that the user can look at, reminisce on, and improve their mood at any time.
+IMHAPPY is a web app with full CRUD functionality that allows the user to journal happy moments of their life. The entries are then sorted into a colorful list in descending order. Whenever the user wants to improve their mood, they can open IMHAPPY and see a list of happy moments of their life. IMHAPPY also gives the user an easy way to remember more happy moments of their life.
 
 * **Colorful:** Every month for each entry has its own background color. The more entries the user makes, the more colorful the app becomes!
 * **Responsive:** IMHAPPY was designed with responsiveness in mind, it will adjust to any screen size.
