@@ -3,7 +3,7 @@ IMHAPPY is a web app with full CRUD functionality that allows the user to journa
 
 * **Colorful:** Every month for each entry has its own background color. The more entries the user makes, the more colorful the app becomes!
 * **Responsive:** IMHAPPY was designed with responsiveness in mind, it will adjust to any screen size.
-* **CRUD:** IMHAPPY entries contain full CRUD (Create, Read, Update, Destroy) functionality.
+* **CRUD:** IMHAPPY entries contain full CRUD (Create, Read, Update, Delete) functionality.
 
 Technologies used to create IMHAPPY include [React.js](https://github.com/facebook/create-react-app), [JSON server](https://github.com/typicode/json-server), [Google Material design icons](https://github.com/google/material-design-icons), JavaScript, CSS, and HTML.
 
